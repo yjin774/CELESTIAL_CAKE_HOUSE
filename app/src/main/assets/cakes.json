@@ -1,0 +1,624 @@
+[
+  {
+    "id": "cake_chocolate_fudge",
+    "flavor": "Chocolate",
+    "type": "Chocolate Fudge Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_cocoa": 30.0,
+      "ing_chocolate_ganache": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 111.92,
+    "sliceCakePrice": 7.88,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_chocolate_devils_food",
+    "flavor": "Chocolate",
+    "type": "Devils Food Cake",
+    "ingredients": {
+      "ing_flour": 130.0,
+      "ing_sugar": 110.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 85.0,
+      "ing_cocoa": 35.0,
+      "ing_buttermilk": 60.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 119.31,
+    "sliceCakePrice": 10.25,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_chocolate_lava",
+    "flavor": "Chocolate",
+    "type": "Chocolate Lava Cake",
+    "ingredients": {
+      "ing_flour": 100.0,
+      "ing_sugar": 90.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 100.0,
+      "ing_cocoa": 40.0,
+      "ing_chocolate_chips": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 61.4,
+    "sliceCakePrice": 7.19,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_chocolate_mocha",
+    "flavor": "Chocolate",
+    "type": "Chocolate Mocha Cake",
+    "ingredients": {
+      "ing_flour": 125.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_cocoa": 30.0,
+      "ing_coffee": 20.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 74.62,
+    "sliceCakePrice": 7.85,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_chocolate_banana",
+    "flavor": "Chocolate",
+    "type": "Chocolate Banana Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_cocoa": 30.0,
+      "ing_banana": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 61.96,
+    "sliceCakePrice": 7.69,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_pandan_coconut",
+    "flavor": "Pandan",
+    "type": "Pandan Coconut Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_pandan_extract": 20.0,
+      "ing_coconut_milk": 60.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 99.48,
+    "sliceCakePrice": 7.76,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_pandan_chiffon",
+    "flavor": "Pandan",
+    "type": "Pandan Chiffon Cake",
+    "ingredients": {
+      "ing_flour": 100.0,
+      "ing_sugar": 90.0,
+      "ing_eggs": 4.0,
+      "ing_butter": 50.0,
+      "ing_pandan_extract": 30.0,
+      "ing_coconut_cream": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 124.97,
+    "sliceCakePrice": 8.12,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_pandan_layer",
+    "flavor": "Pandan",
+    "type": "Pandan Layer Cake",
+    "ingredients": {
+      "ing_flour": 150.0,
+      "ing_sugar": 120.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 100.0,
+      "ing_pandan_extract": 40.0,
+      "ing_coconut_milk": 80.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 92.52,
+    "sliceCakePrice": 14.07,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_pandan_roll",
+    "flavor": "Pandan",
+    "type": "Pandan Roll Cake",
+    "ingredients": {
+      "ing_flour": 80.0,
+      "ing_sugar": 70.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 60.0,
+      "ing_pandan_extract": 25.0,
+      "ing_coconut_cream": 40.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 106.66,
+    "sliceCakePrice": 13.92,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_pandan_crepe",
+    "flavor": "Pandan",
+    "type": "Pandan Crepe Cake",
+    "ingredients": {
+      "ing_flour": 140.0,
+      "ing_sugar": 110.0,
+      "ing_eggs": 4.0,
+      "ing_butter": 90.0,
+      "ing_pandan_extract": 35.0,
+      "ing_coconut_milk": 70.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 122.19,
+    "sliceCakePrice": 14.46,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_cheese_classic",
+    "flavor": "Cheese",
+    "type": "Classic Cheesecake",
+    "ingredients": {
+      "ing_cream_cheese": 200.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 80.0,
+      "ing_flour": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 134.24,
+    "sliceCakePrice": 9.03,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_cheese_new_york",
+    "flavor": "Cheese",
+    "type": "New York Cheesecake",
+    "ingredients": {
+      "ing_cream_cheese": 250.0,
+      "ing_sugar": 120.0,
+      "ing_eggs": 4.0,
+      "ing_butter": 100.0,
+      "ing_flour": 60.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 99.84,
+    "sliceCakePrice": 7.32,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_cheese_baked",
+    "flavor": "Cheese",
+    "type": "Baked Cheesecake",
+    "ingredients": {
+      "ing_cream_cheese": 220.0,
+      "ing_sugar": 110.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 90.0,
+      "ing_flour": 55.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 135.36,
+    "sliceCakePrice": 11.74,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_cheese_no_bake",
+    "flavor": "Cheese",
+    "type": "No Bake Cheesecake",
+    "ingredients": {
+      "ing_cream_cheese": 200.0,
+      "ing_sugar": 100.0,
+      "ing_gelatin": 10.0,
+      "ing_butter": 80.0,
+      "ing_flour": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 81.92,
+    "sliceCakePrice": 11.18,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_cheese_strawberry",
+    "flavor": "Cheese",
+    "type": "Strawberry Cheesecake",
+    "ingredients": {
+      "ing_cream_cheese": 210.0,
+      "ing_sugar": 105.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 85.0,
+      "ing_strawberries": 100.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 138.57,
+    "sliceCakePrice": 9.28,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_lemon_classic",
+    "flavor": "Lemon",
+    "type": "Classic Lemon Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_lemon_juice": 30.0,
+      "ing_lemon_zest": 10.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 85.97,
+    "sliceCakePrice": 14.58,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_lemon_pound",
+    "flavor": "Lemon",
+    "type": "Lemon Pound Cake",
+    "ingredients": {
+      "ing_flour": 150.0,
+      "ing_sugar": 120.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 100.0,
+      "ing_lemon_juice": 40.0,
+      "ing_lemon_zest": 15.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 132.05,
+    "sliceCakePrice": 10.9,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_lemon_chiffon",
+    "flavor": "Lemon",
+    "type": "Lemon Chiffon Cake",
+    "ingredients": {
+      "ing_flour": 100.0,
+      "ing_sugar": 90.0,
+      "ing_eggs": 4.0,
+      "ing_butter": 50.0,
+      "ing_lemon_juice": 35.0,
+      "ing_lemon_zest": 12.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 65.16,
+    "sliceCakePrice": 13.33,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_lemon_curd_layer",
+    "flavor": "Lemon",
+    "type": "Lemon Curd Layer Cake",
+    "ingredients": {
+      "ing_flour": 140.0,
+      "ing_sugar": 110.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 90.0,
+      "ing_lemon_curd": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 118.08,
+    "sliceCakePrice": 14.86,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_lemon_blueberry",
+    "flavor": "Lemon",
+    "type": "Lemon Blueberry Cake",
+    "ingredients": {
+      "ing_flour": 130.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_lemon_juice": 30.0,
+      "ing_blueberries": 100.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 87.51,
+    "sliceCakePrice": 7.87,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_carrot_classic",
+    "flavor": "Carrot",
+    "type": "Classic Carrot Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_carrots": 150.0,
+      "ing_cinnamon": 5.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 113.65,
+    "sliceCakePrice": 13.31,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_carrot_cream_cheese",
+    "flavor": "Carrot",
+    "type": "Carrot Cake with Cream Cheese Frosting",
+    "ingredients": {
+      "ing_flour": 130.0,
+      "ing_sugar": 110.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 90.0,
+      "ing_carrots": 160.0,
+      "ing_cream_cheese": 100.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 79.09,
+    "sliceCakePrice": 10.88,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_carrot_walnut",
+    "flavor": "Carrot",
+    "type": "Carrot Walnut Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_carrots": 150.0,
+      "ing_walnuts": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 120.6,
+    "sliceCakePrice": 9.59,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_carrot_pineapple",
+    "flavor": "Carrot",
+    "type": "Carrot Pineapple Cake",
+    "ingredients": {
+      "ing_flour": 140.0,
+      "ing_sugar": 110.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 90.0,
+      "ing_carrots": 150.0,
+      "ing_pineapple": 100.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 86.19,
+    "sliceCakePrice": 15.0,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_carrot_coconut",
+    "flavor": "Carrot",
+    "type": "Carrot Coconut Cake",
+    "ingredients": {
+      "ing_flour": 130.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_carrots": 150.0,
+      "ing_coconut_flakes": 50.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 85.03,
+    "sliceCakePrice": 8.55,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_mango_classic",
+    "flavor": "Mango",
+    "type": "Classic Mango Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_mango_puree": 100.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 71.46,
+    "sliceCakePrice": 9.67,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_mango_layer",
+    "flavor": "Mango",
+    "type": "Mango Layer Cake",
+    "ingredients": {
+      "ing_flour": 150.0,
+      "ing_sugar": 120.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 100.0,
+      "ing_mango_puree": 150.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 90.3,
+    "sliceCakePrice": 14.13,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_mango_cheesecake",
+    "flavor": "Mango",
+    "type": "Mango Cheesecake",
+    "ingredients": {
+      "ing_cream_cheese": 200.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 3.0,
+      "ing_butter": 80.0,
+      "ing_mango_puree": 120.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 90.99,
+    "sliceCakePrice": 7.21,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_mango_coconut",
+    "flavor": "Mango",
+    "type": "Mango Coconut Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_mango_puree": 100.0,
+      "ing_coconut_milk": 60.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 60.84,
+    "sliceCakePrice": 13.41,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_mango_lime",
+    "flavor": "Mango",
+    "type": "Mango Lime Cake",
+    "ingredients": {
+      "ing_flour": 130.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_mango_puree": 100.0,
+      "ing_lime_zest": 10.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 109.07,
+    "sliceCakePrice": 8.16,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_red_velvet_classic",
+    "flavor": "Red Velvet",
+    "type": "Classic Red Velvet Cake",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_cocoa": 20.0,
+      "ing_red_food_coloring": 5.0,
+      "ing_buttermilk": 60.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 135.46,
+    "sliceCakePrice": 13.19,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_red_velvet_cheesecake",
+    "flavor": "Red Velvet",
+    "type": "Red Velvet Cheesecake",
+    "ingredients": {
+      "ing_flour": 50.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 3.0,
+      "ing_cream_cheese": 200.0,
+      "ing_cocoa": 15.0,
+      "ing_red_food_coloring": 5.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 74.88,
+    "sliceCakePrice": 10.71,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_red_velvet_cupcakes",
+    "flavor": "Red Velvet",
+    "type": "Red Velvet Cupcakes",
+    "ingredients": {
+      "ing_flour": 110.0,
+      "ing_sugar": 90.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 70.0,
+      "ing_cocoa": 15.0,
+      "ing_red_food_coloring": 5.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 125.05,
+    "sliceCakePrice": 7.04,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_red_velvet_trifle",
+    "flavor": "Red Velvet",
+    "type": "Red Velvet Trifle",
+    "ingredients": {
+      "ing_flour": 120.0,
+      "ing_sugar": 100.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 80.0,
+      "ing_cocoa": 20.0,
+      "ing_red_food_coloring": 5.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 70.69,
+    "sliceCakePrice": 8.77,
+    "availableProduce": 0
+  },
+  {
+    "id": "cake_red_velvet_pops",
+    "flavor": "Red Velvet",
+    "type": "Red Velvet Cake Pops",
+    "ingredients": {
+      "ing_flour": 100.0,
+      "ing_sugar": 90.0,
+      "ing_eggs": 2.0,
+      "ing_butter": 70.0,
+      "ing_cocoa": 15.0,
+      "ing_red_food_coloring": 5.0
+    },
+    "wholeCakeQuantity": 0,
+    "sliceQuantity": 0,
+    "wholeCakePrice": 64.17,
+    "sliceCakePrice": 10.81,
+    "availableProduce": 0
+  }
+]

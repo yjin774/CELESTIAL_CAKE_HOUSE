@@ -1,0 +1,182 @@
+[
+  {
+    "id": "ing_flour",
+    "name": "Flour",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_sugar",
+    "name": "Sugar",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_eggs",
+    "name": "Eggs",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_butter",
+    "name": "Butter",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_cocoa",
+    "name": "Cocoa Powder",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_chocolate_ganache",
+    "name": "Chocolate Ganache",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_chocolate_chips",
+    "name": "Chocolate Chips",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_coffee",
+    "name": "Coffee Powder",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_buttermilk",
+    "name": "Buttermilk",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_banana",
+    "name": "Banana",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_pandan_extract",
+    "name": "Pandan Extract",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_coconut_milk",
+    "name": "Coconut Milk",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_coconut_cream",
+    "name": "Coconut Cream",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_vanilla_extract",
+    "name": "Vanilla Extract",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_vanilla_beans",
+    "name": "Vanilla Beans",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_cream_cheese",
+    "name": "Cream Cheese",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_walnuts",
+    "name": "Walnuts",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_almonds",
+    "name": "Almonds",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_strawberries",
+    "name": "Strawberries",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_gelatin",
+    "name": "Gelatin",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_lemon_juice",
+    "name": "Lemon Juice",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_lemon_zest",
+    "name": "Lemon Zest",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_lemon_curd",
+    "name": "Lemon Curd",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_carrots",
+    "name": "Carrots",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_cinnamon",
+    "name": "Cinnamon",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_pineapple",
+    "name": "Pineapple",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_coconut_flakes",
+    "name": "Coconut Flakes",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_lime_zest",
+    "name": "Lime Zest",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_mango_puree",
+    "name": "Mango Puree",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  },
+  {
+    "id": "ing_red_food_coloring",
+    "name": "Red Food Coloring",
+    "quantity": 0.0,
+    "expiryDate": "N/A"
+  }
+]

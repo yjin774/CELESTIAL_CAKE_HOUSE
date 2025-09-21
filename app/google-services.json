@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230957228446",
+    "project_id": "celestialapp-59c3d",
+    "storage_bucket": "celestialapp-59c3d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230957228446:android:cc5acbae75ed09162f768f",
+        "android_client_info": {
+          "package_name": "com.example.celestial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjdrysAycpMbNcAVzQxAXwq23HXbxjcR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
