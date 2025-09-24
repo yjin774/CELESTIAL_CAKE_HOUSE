@@ -72,8 +72,6 @@ fun CelestialRoot(
                     startDestination = startDestination,
                     modifier = Modifier.fillMaxSize().weight(1f)
                 ) {
-                    composable("settings") { SettingScreen(navController, inventoryViewModel) }
-
                     composable(
                         "inventory?autoFocusIngredientId={ingredientId}&initialTab={initialTab}&removeMode={removeMode}&editMode={editMode}",
                         arguments = listOf(

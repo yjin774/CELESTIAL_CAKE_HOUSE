@@ -7,10 +7,10 @@
       </SelectionState>
       <SelectionState runConfigName="CelestialApp.app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-09-20T14:21:02.623659Z">
+        <DropdownSelection timestamp="2025-09-23T15:34:12.224303Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/jinnn/.android/avd/Pixel_3a.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/jinnn/.android/avd/Pixel_4.avd" />
             </handle>
           </Target>
         </DropdownSelection>

@@ -1908,6 +1908,7 @@ class InventoryViewModel(
                 }
                 // Prepare cake data map to overwrite Firestore document
                 val cakeData = hashMapOf(
+                    "id" to cake.id,
                     "type" to cake.type,
                     "ingredients" to cake.ingredients, // updated ingredients map
                     "wholeCakePrice" to cake.wholeCakePrice,

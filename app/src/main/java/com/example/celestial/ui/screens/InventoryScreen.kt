@@ -1,5 +1,6 @@
 package com.example.celestial.ui.screens
 
+import android.util.Log
 import android.content.res.Configuration
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -49,6 +50,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material3.*
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
@@ -66,6 +68,7 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -490,7 +493,9 @@ fun InventoryScreen(
 
     val tabs = listOf("Cakes", "Ingredients")
     var showCakeDialog by rememberSaveable { mutableStateOf(false) }
-    var selectedCakeForDialog by rememberSaveable { mutableStateOf<Cake?>(null) }
+    var selectedCakeIdForDialog by rememberSaveable { mutableStateOf<String?>(null) }
+    // Resolve the actual Cake object when needed
+    val dialogCake = cakesState.firstOrNull { it.id == selectedCakeIdForDialog }
     var showProduceDialog by rememberSaveable { mutableStateOf(false) }
     var produceQuantity by rememberSaveable { mutableStateOf("") }
     var showSuccessDialog by rememberSaveable { mutableStateOf(false) }
@@ -713,14 +718,18 @@ fun InventoryScreen(
                                         .alpha(cardAlpha)
                                         .border(2.dp, Color.Black, RoundedCornerShape(12.dp))
                                         .clickable {
-                                            if (isRemoveMode) {
-                                                selectedRemoveItem = cake
-                                                showRemoveConfirmDialog = true
-                                            } else if (isEditMode) {
-                                                selectedCakeForEdit = cake
-                                            } else {
-                                                selectedCakeForDialog = cake
-                                                showCakeDialog = true
+                                            when {
+                                                isRemoveMode -> {
+                                                    selectedRemoveItem = cake
+                                                    showRemoveConfirmDialog = true
+                                                }
+                                                isEditMode -> {
+                                                    selectedCakeForEdit = cake
+                                                }
+                                                else -> {
+                                                    selectedCakeIdForDialog = cake.id
+                                                    showCakeDialog = true
+                                                }
                                             }
                                         },
                                     shape = RoundedCornerShape(12.dp),
@@ -929,7 +938,10 @@ fun InventoryScreen(
                     viewModel = viewModel,
                     cake = selectedCakeForEdit!!,
                     allIngredients = ingredients,
-                    onDismiss = { selectedCakeForEdit = null }
+                    onDismiss = {
+                        selectedCakeForEdit = null
+                        isEditMode = false
+                    }
                 )
             }
 
@@ -1168,11 +1180,16 @@ fun InventoryScreen(
             }
 
             // --- Cake Action Dialogs ---
-            if (showCakeDialog && selectedCakeForDialog != null) {
+            if (showCakeDialog && selectedCakeIdForDialog != null) {
+                val dialogCake = cakesState.firstOrNull { it.id == selectedCakeIdForDialog }
+                val enabled = dialogCake?.let {
+                    viewModel.getAvailableCakesLiveData(it).value != null
+                } ?: false
+
                 ThemedDialog(
                     onDismissRequest = { showCakeDialog = false },
                     darkerKhaki = khakiDark,
-                    title = selectedCakeForDialog!!.type,
+                    title = dialogCake?.type ?: "",
                     content = {
                         Column {
                             Text("Select an action for this cake.", color = khakiDark)
@@ -1183,15 +1200,23 @@ fun InventoryScreen(
                             ThemedDialogButton(
                                 text = "VIEW DETAILS",
                                 onClick = {
-                                    navController.navigate("view_cake_ingredients/${selectedCakeForDialog!!.id}")
-                                    showCakeDialog = false
+                                    val dialogCake = cakesState.firstOrNull { it.id == selectedCakeIdForDialog }
+                                    Log.d("ViewDetails", "Selected ID: ${selectedCakeIdForDialog}, Resolved Cake: $dialogCake, Cake ID: ${dialogCake?.id}")
+                                    if (dialogCake != null && !dialogCake.id.isNullOrBlank()) {
+                                        navController.navigate("view_cake_ingredients/${dialogCake.id}")
+                                        Log.d("ViewDetails", "Navigating to view_cake_ingredients/${dialogCake.id}")
+                                        showCakeDialog = false
+                                    } else {
+                                        Log.e("ViewDetails", "Cannot navigate. dialogCake is null or Cake ID is empty. Cakes count: ${cakesState.size}")
+                                    }
                                 }
                             )
+
+
                             Spacer(Modifier.height(8.dp))
                             ThemedDialogButton(
                                 text = "PRODUCE",
-                                enabled = (viewModel.getAvailableCakesLiveData(selectedCakeForDialog!!).value
-                                    ?: 0) > 0,
+                                enabled = enabled,
                                 onClick = {
                                     produceQuantity = ""
                                     showProduceDialog = true
@@ -1207,13 +1232,17 @@ fun InventoryScreen(
                     }
                 )
             }
-            if (showProduceDialog && selectedCakeForDialog != null) {
-                val available =
-                    viewModel.getAvailableCakesLiveData(selectedCakeForDialog!!).value ?: 0
+            if (showProduceDialog && selectedCakeIdForDialog != null) {
+                val dialogCake = cakesState.firstOrNull { it.id == selectedCakeIdForDialog }
+                val availableValue = dialogCake?.let {
+                    viewModel.getAvailableCakesLiveData(it).value
+                } ?: 0
+
+                val available = availableValue
                 ThemedDialog(
                     onDismissRequest = { showProduceDialog = false },
                     darkerKhaki = khakiDark,
-                    title = "Produce ${selectedCakeForDialog!!.type}",
+                    title = "Produce ${dialogCake?.type}",
                     content = {
                         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             Text("Available to produce: $available", color = khakiDark)
@@ -1237,9 +1266,12 @@ fun InventoryScreen(
                                 val qty = produceQuantity.toIntOrNull() ?: 0
                                 if (qty in 1..available) {
                                     coroutineScope.launch {
-                                        viewModel.produceCake(selectedCakeForDialog!!, qty)
+                                        if (dialogCake != null) {
+                                            viewModel.produceCake(dialogCake, qty)
+                                        }
+
                                         successMessage =
-                                            "PRODUCED ${selectedCakeForDialog!!.type} FOR $qty SUCCESSFUL"
+                                            "PRODUCED ${dialogCake?.type} FOR $qty SUCCESSFUL"
                                         showSuccessDialog = true
                                         showProduceDialog = false
                                     }
@@ -1680,6 +1712,13 @@ fun CakeEditDialog(
     var ingredientsMap by rememberSaveable { mutableStateOf(cake.ingredients.toMutableMap()) }
     val coroutineScope = rememberCoroutineScope()
     val context = LocalContext.current
+    val inputStates = remember(ingredientsMap.keys) {
+        mutableStateMapOf<String, String>().apply {
+            ingredientsMap.forEach { (key, value) ->
+                this[key] = value.toString()
+            }
+        }
+    }
 
     var showSuccessDialog by rememberSaveable { mutableStateOf(false) }
     val darkKhakiColor = Color(0xFF786A42)
@@ -1751,20 +1790,23 @@ fun CakeEditDialog(
                             color = darkKhakiColor,
                         )
                         Spacer(Modifier.width(8.dp))
-                        StyledTextField(
-                            value = qtyPerCake.toString(),
+                        val inputValue = inputStates[ingredientId] ?: ""
+                        BasicTextField(
+                            value = inputValue,
                             onValueChange = { newQtyStr ->
-                                val newQty = newQtyStr.toDoubleOrNull() ?: 0.0
-                                ingredientsMap[ingredientId] = newQty
+                                val filtered = newQtyStr.filter { it.isDigit() || it == '.' }
+                                inputStates[ingredientId] = filtered
+                                val newQty = filtered.toDoubleOrNull() ?: 0.0
+                                ingredientsMap = ingredientsMap.toMutableMap().also { it[ingredientId] = newQty }
                             },
-                            label = "Qty",
+                            keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
                             modifier = Modifier.width(80.dp)
                         )
                         Spacer(Modifier.width(8.dp))
                         Button(
                             modifier = Modifier.border(2.dp, Color.Black, RoundedCornerShape(24.dp)),
                             onClick = {
-                                // Remove ingredient locally only
+                                inputStates.remove(ingredientId)
                                 ingredientsMap = ingredientsMap.toMutableMap().also { it.remove(ingredientId) }
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFC41E3A))
@@ -1900,7 +1942,9 @@ fun CakeEditDialog(
                             showSuccessDialog = true
                             delay(1500L)
                             showSuccessDialog = false
-                            onDismiss()
+
+                            // Inform the parent to turn off edit mode here before dismissing
+                            onDismiss() // This should clear selectedCakeForEdit & turn off edit mode outside
                         }
                     },
                     colors = ButtonDefaults.buttonColors(
