@@ -1725,7 +1725,12 @@ fun CakeEditDialog(
     val scrollState = rememberScrollState()
     var wholeCakePrice by rememberSaveable { mutableStateOf(cake.wholeCakePrice.toString()) }
     var sliceCakePrice by rememberSaveable { mutableStateOf(cake.sliceCakePrice.toString()) }
-
+    val khakiColor = Color(0xFFD7B46A) // normal khaki
+    val focusStates = remember(ingredientsMap.keys) {
+        mutableStateMapOf<String, Boolean>().apply {
+            ingredientsMap.keys.forEach { key -> this[key] = false }
+        }
+    }
 
     RoundedBackgroundContainer {
         Column(
@@ -1791,7 +1796,7 @@ fun CakeEditDialog(
                         )
                         Spacer(Modifier.width(8.dp))
                         val inputValue = inputStates[ingredientId] ?: ""
-                        BasicTextField(
+                        StyledTextField(
                             value = inputValue,
                             onValueChange = { newQtyStr ->
                                 val filtered = newQtyStr.filter { it.isDigit() || it == '.' }
@@ -1799,7 +1804,7 @@ fun CakeEditDialog(
                                 val newQty = filtered.toDoubleOrNull() ?: 0.0
                                 ingredientsMap = ingredientsMap.toMutableMap().also { it[ingredientId] = newQty }
                             },
-                            keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
+                            label = "",
                             modifier = Modifier.width(80.dp)
                         )
                         Spacer(Modifier.width(8.dp))
